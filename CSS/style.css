@@ -12,34 +12,57 @@ section {
     max-width: 100%;
 }
 
-p {
-padding: 50px 0px;
+footer {
+    background-color: rgb(34, 34, 34);
+    color: lightgrey;
+    padding-top: 40px;
+    padding-bottom: 90px;
+    height: 100vh;
 }
+
+footer > div {
+    max-width: 1100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 
 .container {
     margin: 0 auto;
     text-align: center;
-    max-width: 1000px;
-        padding: 50px 0px;
+    max-width: 1100px;
+    padding-top: 100px;
 }
 
-.page__title {
+.page-title {
     color: rgb(229, 49, 112);
     font-weight: bolder;
     font-size: 35px;
 }
 
+.page-text {
+padding: 50px 0px;
+font-weight: 300;
+}
+
 /* CARDS */
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
 
 .cards {
     text-align: left;
     background-color: black;
     float: left;
-    width: calc((100% - 40px) / 3);
-    margin-right: 20px;
-}
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);}
 
-.cards:last-child {
+.cards:nth-child(3n) {
     margin-right: 0px;
 }
 
@@ -48,23 +71,16 @@ padding: 50px 0px;
     padding: 3px;
 }
 
-.cards > div:first-child {
+.cards > :nth-child(2) {
 font-weight: bold;
 padding-top: 5px;
-color: red;
 }
 
 .cards > div:last-child {
 color: rgb(0, 174, 255);
 }
 
-.clearfix::after {
-    content: " ";
-    display: table;
-    clear: both;
-
-}
-.card__image {
+.card__img {
     float: left;
     width: 100px;
     padding-right: 10px;
